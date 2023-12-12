@@ -1,0 +1,50 @@
+@model Alunos
+@{
+    ViewData["Title"] = "Inserir Aluno";
+}
+
+<script>
+    function somenteNumeros(e) {
+        var charCode = e.charCode ? e.charCode : e.keyCode;
+        // charCode 8 = backspace   
+        // charCode 9 = tab
+        if (charCode != 8 && charCode != 9) {
+            // charCode 48 equivale a 0   
+            // charCode 57 equivale a 9
+            if (charCode < 48 || charCode > 57) {
+                return false;
+            }
+        }
+    }
+</script>
+<h1>Inserir novo aluno</h1>
+
+<div>
+    <div class="form-control">
+        <label for="Nome">Nome do Aluno: </label>
+        <input asp-for="Nome">
+    </div>
+    <div class="form-control">
+        <label for="Turma">Turma do Aluno: </label>
+        <input asp-for="Turma">
+    </div>
+    <div class="form-control">
+        <label for="Nota1">Primeira Nota: </label>
+        <input asp-for="Nota1" pattern="^\d+(,\d{1,2})?$">
+    </div>
+    <div class="form-control">
+        <label for="Nota2">Segunda Nota: </label>
+        <input asp-for="Nota2">
+    </div>
+    <div class="form-control">
+        <label for="Nota3">Terceira Nota: </label>
+        <input asp-for="Nota3">
+    </div>
+    <div class="form-control">
+        <label for="Faltas">Quantidade de Faltas: </label>
+        <input asp-for="Faltas">
+    </div>
+    <div class="form-control">
+        <input type="submit" action="Inserir" value="Confirmar" class="btn btn-primary">
+    </div>
+</div>

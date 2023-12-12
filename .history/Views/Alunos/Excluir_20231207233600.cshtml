@@ -1,0 +1,40 @@
+@model AppDb.Models.Alunos
+
+@{
+    ViewData["title"] = "Excluir aluno";
+}
+
+<h1 style="color: red;">Deseja reaelmente deletar esse aluno? Essa operação é irreversível</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome)
+        </dt>
+        <dt class="col-sm-4">
+            @Html.DisplayFor(x => x.Nome)
+        </dt>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(x => x.Turma)
+        </dt>
+        <dt class="col-sm-4">
+            @Html.DisplayFor(x => x.Nota1)
+        </dt>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(x => x.Nota2)
+        </dt>
+        <dt class="col-sm-4">
+            @Html.DisplayFor(x => x.Nota3)
+        </dt>
+        <dt class="col-sm-4">
+            @Html.DisplayFor(x => x.Faltas)
+        </dt>
+    </dl>
+</div>
+
+<form asp-action="ExcluirAluno">
+    <input type="submit" value="Excluir" class="btn btn-danger" />
+</form>
+
+<br>
+<a asp-action="Index">Voltar</a>

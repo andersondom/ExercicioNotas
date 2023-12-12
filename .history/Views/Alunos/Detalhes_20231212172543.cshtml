@@ -1,0 +1,56 @@
+@model AppDB.Models.Alunos
+
+@{
+    ViewData["title"] = "Detalhes do aluno";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Nome)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Turma)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Turma)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nota1)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Nota1)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nota2)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Nota2)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nota3)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Nota3)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Faltas)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Faltas)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Media)
+        </dt>
+        <dt class="col-sm-10">
+            @Html.DisplayFor(x => x.Media)
+        </dt>
+    </dl>
+</div>
+<a asp-action="AlterarAluno" asp-route-id="@Model.Id">Alterar</a> |
+<a asp-action="Index">Voltar</a>

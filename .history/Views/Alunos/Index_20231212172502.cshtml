@@ -1,0 +1,75 @@
+@model IEnumerable<AppDB.Models.Alunos>
+
+@{
+    ViewData["Title"] = "Listagem de Alunos";
+}
+
+<h2>Alunos</h2>
+
+<p>
+    <a asp-action="InserirAluno">Novo Aluno</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Turma)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nota1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nota2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nota3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faltas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Media)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Turma)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Nota1)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Nota2)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Nota3)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => item.Faltas)
+                </td>
+                <td>
+                    <a asp-action="AlterarAluno" asp-route-id="@item.Id">Alterar</a> |
+                    <a asp-action="Detalhes" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="ExcluirAluno" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

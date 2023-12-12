@@ -1,0 +1,30 @@
+@model IEnumerable<AppDb.Models.Alunos>
+
+@{
+    ViewData["Title"] = "Listar Alunos";
+}
+<h1>Listar todos os alunos</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nome)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Turma)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nota1)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nota2)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Nota3)
+        </dt>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(x => x.Faltas)
+        </dt>
+    </dl>
+</div>
+<a asp-action="Editar" asp-route-id="@Model.Id">Editar</a> |

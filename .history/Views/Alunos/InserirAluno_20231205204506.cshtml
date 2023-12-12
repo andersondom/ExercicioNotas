@@ -1,0 +1,18 @@
+@model Alunos
+@{
+    ViewData["Title"] = "Inserir Aluno";
+}
+<h1>Inserir novo aluno</h1>
+<div>
+    <label for="Nome">Nome do Aluno: </label>
+    <input asp-for="Nome">
+    <label for="Turma">Turma do Aluno: </label>
+    <input asp-for="Turma">
+    <label for="Nota1">Primeira Nota: </label>
+    <input asp-for="Nota1">
+    <label for="Nota2">Segunda Nota: </label>
+    <input asp-for="Nota2">
+    <label for="Nota3">Terceira Nota: </label>
+    <input asp-for="Nota3">
+    <input type="submit" action="Inserir" value="Confirmar">
+</div>
